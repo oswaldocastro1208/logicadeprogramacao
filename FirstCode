@@ -1,0 +1,12 @@
+print("Hello, world")
+print (3+8)
+print (4 > 5)
+print (1,2,3,4,5)
+
+x = "Quem está aí?"
+y = input(x)
+z = f"Olá, {y}! =)"
+print(z)
+
+if y == "":
+    print("Sem resposta")
