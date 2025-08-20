@@ -1,0 +1,21 @@
+import random
+
+numero_aleatorio = random.randint(1, 10)
+try:
+    palpite_jogador = int(input('Adivinhe o número entre 1 e 10: '))
+    numero_tentativas = 1
+
+    while numero_aleatorio != palpite_jogador:
+        numero_tentativas += 1 # Incrementa o número de tentativas
+
+        if palpite_jogador < numero_aleatorio:
+            print("Muito baixo! Tente novamente.")
+        elif palpite_jogador > numero_aleatorio:
+            print("Muito alto! Tente novamente.")
+
+        palpite_jogador = int(input(' Digite um numero inteiro entre 1 a 10:'))
+
+    print(f"Parabéns! Você acertou o número {numero_aleatorio} em {numero_tentativas} tentativas.")
+    
+except ValueError:
+    print ('Não é um número inteiro válido.')    
